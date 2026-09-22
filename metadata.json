@@ -1,0 +1,6 @@
+{
+  "name": "LN lecteurFR",
+  "description": "Lecteur et téléchargeur de webnovels et light novels depuis NovelFrance.fr et ChiReads, avec personnalisation avancée des polices, marges et lecteur hors ligne.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

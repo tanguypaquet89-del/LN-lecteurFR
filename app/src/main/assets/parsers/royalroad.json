@@ -1,0 +1,41 @@
+{
+  "id": "royalroad",
+  "name": "Royal Road",
+  "baseUrl": "https://www.royalroad.com",
+  "version": 1,
+  "flag": "👑",
+  "description": "Portail LitRPG, Fantasy et Webnovels anglophones",
+  "urlPatterns": [
+    "royalroad.com"
+  ],
+  "novelUrlPatterns": [
+    "/fiction/"
+  ],
+  "novelUrlExcludePatterns": [
+    "/chapter/"
+  ],
+  "selectors": {
+    "title": "h1, .fic-header h1",
+    "author": "h4 span a, .author a",
+    "authorDefault": "Auteur Royal Road",
+    "cover": ".thumbnail, img.img-responsive",
+    "coverAttr": "src",
+    "synopsis": ".description .hidden-content, .description",
+    "genres": ".tags a, a.label",
+    "chapters": {
+      "list": "#chapters tbody tr a[href*='/fiction/']",
+      "urlAttr": "href",
+      "reverse": false
+    },
+    "content": {
+      "body": ".chapter-inner p, .chapter-content p",
+      "remove": [
+        ".author-note-portlet",
+        "script",
+        "style",
+        ".adsbygoogle"
+      ],
+      "cleanTitle": true
+    }
+  }
+}

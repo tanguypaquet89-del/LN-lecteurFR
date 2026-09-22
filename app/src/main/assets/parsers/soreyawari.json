@@ -1,0 +1,42 @@
+{
+  "id": "soreyawari",
+  "name": "Soreyawari",
+  "baseUrl": "https://soreyawari.com",
+  "version": 1,
+  "flag": "🌸",
+  "description": "Light novels japonais et isekai en français",
+  "urlPatterns": [
+    "soreyawari.com"
+  ],
+  "novelUrlPatterns": [
+    "/roman/"
+  ],
+  "novelUrlExcludePatterns": [
+    "/chapitre/"
+  ],
+  "selectors": {
+    "title": ".elementor-heading-title, h1",
+    "author": ".author, .elementor-author",
+    "authorDefault": "Soreyawari",
+    "cover": "img[src*='uploads']",
+    "coverAttr": "src",
+    "coverFallbackAttr": "data-src",
+    "synopsis": ".elementor-text-editor p",
+    "genres": ".tag, .genre",
+    "chapters": {
+      "list": "a[href*='soreyawari.com/20']",
+      "urlAttr": "href",
+      "titleAttr": "title",
+      "reverse": false
+    },
+    "content": {
+      "body": ".elementor-widget-theme-post-content p, .entry-content p",
+      "remove": [
+        ".ads",
+        "script",
+        "style"
+      ],
+      "cleanTitle": true
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "id": "wuxiaworld",
+  "name": "WuxiaWorld",
+  "baseUrl": "https://www.wuxiaworld.com",
+  "version": 1,
+  "flag": "⚔️",
+  "description": "Communauté Xianxia et Wuxia",
+  "urlPatterns": [
+    "wuxiaworld.com"
+  ],
+  "novelUrlPatterns": [
+    "/novel/"
+  ],
+  "novelUrlExcludePatterns": [
+    "/chapter/"
+  ],
+  "selectors": {
+    "title": "h1, .novel-title",
+    "author": ".author, .novel-author",
+    "authorDefault": "Auteur WuxiaWorld",
+    "cover": ".novel-cover img, .cover img",
+    "coverAttr": "src",
+    "synopsis": ".synopsis, .description",
+    "genres": ".genres a, .tags a",
+    "chapters": {
+      "list": ".chapter-item a, a[href*='/novel/'][href*='/chapter']",
+      "urlAttr": "href",
+      "reverse": false
+    },
+    "content": {
+      "body": ".chapter-content p, #chapter-content p",
+      "remove": [
+        "script",
+        "style",
+        ".ads",
+        ".announcement"
+      ],
+      "cleanTitle": true
+    }
+  }
+}

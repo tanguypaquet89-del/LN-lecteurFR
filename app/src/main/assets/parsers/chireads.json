@@ -1,0 +1,48 @@
+{
+  "id": "chireads",
+  "name": "ChiReads",
+  "baseUrl": "https://chireads.com",
+  "version": 1,
+  "flag": "🇨🇳",
+  "description": "Romans chinois et asiatiques traduits en français",
+  "urlPatterns": [
+    "chireads.com"
+  ],
+  "novelUrlPatterns": [
+    "/category/translatedtales/",
+    "/category/original/",
+    "/category/"
+  ],
+  "novelUrlExcludePatterns": [
+    "^https?://(www\\.)?chireads\\.com/?$",
+    "/category/translatedtales/?$",
+    "/category/original/?$",
+    "/page/"
+  ],
+  "selectors": {
+    "title": "h1.refresh-detail-title, .refresh-detail-hero h1, h1",
+    "author": ".refresh-detail-meta dd",
+    "authorDefault": "Auteur ChiReads",
+    "cover": ".refresh-detail-cover img",
+    "coverAttr": "src",
+    "coverFallbackAttr": "data-src",
+    "synopsis": ".refresh-detail-summary-content, .refresh-detail-hero-summary",
+    "genres": ".refresh-detail-tags a, a[href*='/tag/']",
+    "chapters": {
+      "list": ".refresh-detail-chapter-list a",
+      "urlAttr": "href",
+      "titleAttr": "title",
+      "reverse": false
+    },
+    "content": {
+      "body": ".refresh-detail-content p, .entry-content p, .post-content p",
+      "remove": [
+        ".ads",
+        "script",
+        "style",
+        ".social-share"
+      ],
+      "cleanTitle": true
+    }
+  }
+}
